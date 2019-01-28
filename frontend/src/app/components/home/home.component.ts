@@ -12,12 +12,10 @@ export class HomeComponent implements OnInit {
     private route: Router
   ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   goToSearch(search: string) {
     this.route.navigate([`/package/` + search])
   }
-
 
 }
