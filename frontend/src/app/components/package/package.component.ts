@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/services/data/data.service';
 import { Package } from '../../models/package';
 
@@ -16,8 +16,7 @@ export class PackageComponent implements OnInit {
 
   constructor(
     private routeParam: ActivatedRoute,
-    private dataService: DataService,
-    private route: Router
+    private dataService: DataService
   ) { }
 
   ngOnInit(): void {
@@ -25,19 +24,8 @@ export class PackageComponent implements OnInit {
 
     this.dataService.getPackage(this.requestedPackage).subscribe(result => {
      this.package = result;  
-
     }, err => {
       console.log(err);
     })
-
   }
-
-
-  getNpmPage() {
-    window.location.href = 'https://www.npmjs.com/package/' + this.package._id;
-  }
-
-
-
-
 }

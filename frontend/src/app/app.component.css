@@ -1,2 +1,19 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 7%;
+  right: 40px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  z-index: 1000;
+}
 
+.show-scroll {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.849);
+}
 
+#btnToTop {
+  background-color: rgba(0, 0, 0, 0.452);
+}

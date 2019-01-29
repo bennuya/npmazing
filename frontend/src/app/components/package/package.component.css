@@ -1,13 +1,137 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: block;
+  text-align: justify;
+}
+
+.nameContainer {
+  display: flex;
+  text-align: center;
+}
+
+.descriptionContainer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.maintainersTitle {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.maintainersContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  text-align: center;
+}
+
+.maintainerName {
+  order: 1;
+  text-align: center;
+}
+
+
+ul li {
+  text-align: left;
+  list-style-type: none;
+  margin-top: 5px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #ffc104;
+  transition: 0.3s;
+  text-align: center;
+}
+
+a:hover {
+  color: #f5e8b5;
+}
+
+.maintainerEmail {
+  order: 2;
+  text-align: center;
+}
+
+.homepageContainer {
+  margin-top: 27px;
+  text-align: center;
+}
+
+.fishBtn {
+  background-color: #212529 !important;
+  border: 1px solid #ffc104 !important;
+  border-radius: 20px !important;
+  transition: 0.3s !important;
+  color: #ffc104 !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.fishBtn:hover {
+  background-color: #ffc104 !important;
+  border: 1px solid #ffc104 !important;
+  color: #7e6006 !important;
+}
+
+.fishUl {
+  margin-top: 10px;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.keywordsContainer {
+  order: 1;
+  text-align: center;
+  margin-left: 230px;
+  margin-right: 230px;
+}
+
+.licenseContainer {
+  order: 2;
+  text-align: center;
+}
+
+.npmPageContainer {
+  order: 3;
+  text-align: center;
+}
+
+.homepageContainer h4 {
+  margin-bottom: 3px;
+}
+
+.keywordsContainer h4 {
+  margin-bottom: 3px;
+}
+
+.keywordsBtn {
+  border-color: 1px solid #ffc104;
+  background-color: #212529;
+  border-radius: 20px;
+  color: #ffc104;
+  transition: 0.3s;
+}
+
+.keywordsBtn:hover {
+  color: white;
+  background-color: #ffc104;
+}
+
 .backBtn {
   cursor: pointer;
   text-align: left;
-  margin-top: 3px;
-  margin-left: -275px !important;
+  margin-left: -305px !important;
   opacity: 0.5;
 }
 
 .backBtn:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .backBtn:active,

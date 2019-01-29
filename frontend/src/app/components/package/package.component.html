@@ -1,47 +1,97 @@
+<h1 class="backBtn" routerLink="/">
+  <i class="icofont-long-arrow-left"></i>
+</h1>
+
 <div class="container">
 
+  <div class="nameContainer">
+    <h1>{{package.name}}</h1>
+  </div>
 
-  <h1 class="backBtn" routerLink="/">
-    <i class="icofont-long-arrow-left"></i>
-  </h1>
+  <div class="descriptionContainer">
+    <p>
+      {{package.description}}
+    </p>
+  </div>
 
-  <p>Name: {{package.name}}</p>
-  <br>
+  <div class="maintainersTitle">
+    <h3>Maintainers</h3>
+  </div>
 
-  <p>Author Name: {{package.author.name}}</p>
-  <br>
+  <div class="maintainersContainer">
 
-  <p>Author Email: {{package.author.email}}</p>
-  <br>
+    <div class="maintainerName">
+      <ul *ngFor="let maintainer of package.maintainers">
+        <li>
+          <a href="https://www.npmjs.com/~{{maintainer.name}}" target="_blank">{{maintainer.name}}</a>
+        </li>
+      </ul>
+    </div>
 
-  <p>Bugs: {{package.bugs.url}}</p>
-  <br>
+    <div class="maintainerEmail">
+      <ul *ngFor="let maintainer of package.maintainers">
+        <li>{{maintainer.email}}</li>
+      </ul>
+    </div>
 
-  <p>Desc: {{package.description}}</p>
-  <br>
+  </div>
 
-  <p>Homepage: {{package.homepage}}</p>
-  <br>
+  <div class="homepageContainer">
+    <h4>Link to Homepage</h4>
+    <p>
+      <a href="{{package.homepage}}" target="_blank">{{package.homepage}}</a>
+    </p>
+  </div>
 
-  <p>Keywords: {{package.keywords}}</p>
-  <br>
 
-  <p>License: {{package.license}}</p>
-  <br>
+  <div class="mark">
+    <markdown [data]="markdown">
+      <h2>{{package.readmeFilename}}</h2>
+      {{package.readme}}
+    </markdown>
+  </div>
 
-  <p>Maintainers Name:</p>
-  <ul *ngFor="let maintainer of package.maintainers">
-    <li>{{maintainer.name}}</li>
-  </ul>
-  <br>
-  <p>Maintainers Email:</p>
-  <ul *ngFor="let maintainer of package.maintainers">
-    <li>{{maintainer.email}}</li>
-  </ul>
-  <br>
 
-  <p>readme: {{package.readme}}</p>
-  <br>
+
+
+  <div class="keywordsContainer">
+    <h3>Keywords</h3>
+    <ul class="fishUl" *ngFor="let keyword of package.keywords">
+      <li>
+        <a class="fishBtn" href="https://www.npmjs.com/search?q=keywords:{{keyword}}" target="_blank">{{keyword}}</a>
+      </li>
+    </ul>
+
+
+
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <br />
+
+
+
+
+  <!--
+    
+  
+  <br />
+  <br />
+
+
+  <markdown [src]="" lineNumbers [start]="5">
+    readme: {{package.readme}}
+  </markdown>
+
+
+
+
+  <br />
+  <br />
+  <br />
+  <br />
 
   <p>readme filename: {{package.readmeFilename}}</p>
   <br>
@@ -50,10 +100,19 @@
   <br>
   <p>repo url: {{package.repository.url}}</p>
   <br>
+ -->
+
+  <br />
+  <br />
+
+  <div class="npmPageContainer">
+    <a href="https://www.npmjs.com/package/{{package._id}}" target="_blank">Click here to see the package on NPM
+      directly</a>
+  </div>
+  
+  <br />
 
 
-  <a (click)="getNpmPage()">
-    Click here to see the package on NPM directly
-  </a>
+
 
 </div>
