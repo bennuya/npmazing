@@ -1,3 +1,59 @@
-<p>
-  package works!
-</p>
+<div class="container">
+
+
+  <h1 class="backBtn" routerLink="/">
+    <i class="icofont-long-arrow-left"></i>
+  </h1>
+
+  <p>Name: {{package.name}}</p>
+  <br>
+
+  <p>Author Name: {{package.author.name}}</p>
+  <br>
+
+  <p>Author Email: {{package.author.email}}</p>
+  <br>
+
+  <p>Bugs: {{package.bugs.url}}</p>
+  <br>
+
+  <p>Desc: {{package.description}}</p>
+  <br>
+
+  <p>Homepage: {{package.homepage}}</p>
+  <br>
+
+  <p>Keywords: {{package.keywords}}</p>
+  <br>
+
+  <p>License: {{package.license}}</p>
+  <br>
+
+  <p>Maintainers Name:</p>
+  <ul *ngFor="let maintainer of package.maintainers">
+    <li>{{maintainer.name}}</li>
+  </ul>
+  <br>
+  <p>Maintainers Email:</p>
+  <ul *ngFor="let maintainer of package.maintainers">
+    <li>{{maintainer.email}}</li>
+  </ul>
+  <br>
+
+  <p>readme: {{package.readme}}</p>
+  <br>
+
+  <p>readme filename: {{package.readmeFilename}}</p>
+  <br>
+
+  <p>repo type: {{package.repository.type}}</p>
+  <br>
+  <p>repo url: {{package.repository.url}}</p>
+  <br>
+
+
+  <a (click)="getNpmPage()">
+    Click here to see the package on NPM directly
+  </a>
+
+</div>

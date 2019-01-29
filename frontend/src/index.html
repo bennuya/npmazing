@@ -1,14 +1,29 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Npmazing</title>
+  <title>npmazing</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
+
+  <!-- css framework -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+  <!-- icons -->
+  <link rel="stylesheet" href="./assets/icons/icofont/icofont.min.css">
+
 <body>
-  <app-root></app-root>
+
+  <div class="gradient-border" id="box">
+    <app-root></app-root>
+    <app-package></app-package>
+  </div>
+
 </body>
+
 </html>

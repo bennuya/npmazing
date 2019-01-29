@@ -1,0 +1,95 @@
+.backBtn {
+  cursor: pointer;
+  text-align: left;
+  margin-top: 3px;
+  margin-left: -275px !important;
+  opacity: 0.5;
+}
+
+.backBtn:hover {
+    opacity: 1;
+}
+
+.backBtn:active,
+.backBtn:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+/* .navArrow {
+    order: 2;
+    margin-top: -50px;
+    position: absolute;
+    margin-left: 80px;
+  } */
+
+.backBtn {
+  position: relative;
+  -webkit-animation-name: cursorAnimation;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite;
+  /* Safari 4.0 - 8.0 */
+  animation-name: cursorAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes cursorAnimation {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: 30px;
+    top: 0px;
+  }
+
+  50% {
+    left: 0px;
+    top: 0px;
+  }
+
+  75% {
+    left: 30px;
+    top: 0px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+/* Standard syntax */
+@keyframes cursorAnimation {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: 30px;
+    top: 0px;
+  }
+
+  50% {
+    left: 0px;
+    top: 0px;
+  }
+
+  75% {
+    left: 30px;
+    top: 0px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
