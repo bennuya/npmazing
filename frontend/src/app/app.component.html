@@ -1,5 +1,7 @@
 <div class="container mx-auto">
 
+  <ng-http-loader [minDuration]="1000" [entryComponent]="loaderComponent"></ng-http-loader>
+
   <router-outlet>
     <div class="scroll-to-top" [ngClass]="{'show-scroll': isFixed}">
       <h1 id="btnToTop" mat-fab (click)="scrollToTop()">

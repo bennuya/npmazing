@@ -9,6 +9,12 @@ import { PackageComponent } from './components/package/package.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { NgHttpLoaderModule } from 'ng-http-loader';
+import { LoaderComponent } from './components/loader/loader.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -22,7 +28,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     PackageComponent,
-    FilterPipe
+    FilterPipe,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +37,16 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes),
     MarkdownModule.forRoot(),
+    NgHttpLoaderModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
   providers: [
     FilterPipe,
+  ],
+  entryComponents: [
+    LoaderComponent
   ],
   bootstrap: [AppComponent]
 })
