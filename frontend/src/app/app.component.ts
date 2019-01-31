@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ export class AppComponent {
 
   ngOnInit() { }
   
+  public loaderComponent = LoaderComponent;
 
   // Scroll to Top on every Request in the Router Outlet
   onActivate(event: Event) {
