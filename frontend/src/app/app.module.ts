@@ -16,13 +16,15 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { ShowFeedbackComponent } from './components/show-feedback/show-feedback.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'package', component: PackageComponent },
   { path: 'package/:search', component: PackageComponent },
-  { path: 'feedback', component: FeedbackComponent }
+  { path: 'feedback', component: FeedbackComponent },
+  { path: 'all-feedbacks/:id', component: ShowFeedbackComponent }
 ];
 
 @NgModule({
@@ -33,6 +35,7 @@ const routes: Routes = [
     FilterPipe,
     LoaderComponent,
     FeedbackComponent,
+    ShowFeedbackComponent,
   ],
   imports: [
     BrowserModule,

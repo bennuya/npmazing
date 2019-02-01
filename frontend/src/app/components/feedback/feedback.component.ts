@@ -3,6 +3,7 @@ import { Feedback } from '../../models/feedback';
 import { DataService } from 'src/app/services/data/data.service';
 import { Observable } from 'rxjs';
 import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feedback',
@@ -19,12 +20,15 @@ export class FeedbackComponent implements OnInit {
 
   show: boolean = false;
 
+  feedbackId;
+
   private feedbackCollection: AngularFirestoreCollection<Feedback>;
   feedbacks: Observable<Feedback[]>;
 
   constructor(
     private data: DataService,
     private afs: AngularFirestore,
+    private router: Router
   ) {
     this.feedbackCollection = afs.collection<Feedback>('feedbacks');
     this.feedbacks = this.feedbackCollection.valueChanges();
@@ -39,7 +43,9 @@ export class FeedbackComponent implements OnInit {
         'email': this.email,
         'feedback': this.feedback
       }
-    );
+    ).then(result => {
+      this.feedbackId = result.id;
+    });
 
     this.name = '';
     this.email = '';
@@ -48,6 +54,9 @@ export class FeedbackComponent implements OnInit {
     alert("Successfully submitted Feedback!");
   }
 
+  showFeedback() {
+    this.router.navigate(['/all-feedbacks/' + this.feedbackId]);
+  }
 
 
 }
