@@ -15,12 +15,14 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { FeedbackComponent } from './components/feedback/feedback.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'package', component: PackageComponent },
-  { path: 'package/:search', component: PackageComponent }
+  { path: 'package/:search', component: PackageComponent },
+  { path: 'feedback', component: FeedbackComponent }
 ];
 
 @NgModule({
@@ -29,7 +31,8 @@ const routes: Routes = [
     HomeComponent,
     PackageComponent,
     FilterPipe,
-    LoaderComponent
+    LoaderComponent,
+    FeedbackComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,8 +42,8 @@ const routes: Routes = [
     MarkdownModule.forRoot(),
     NgHttpLoaderModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFirestoreModule,
+    AngularFireStorageModule,
   ],
   providers: [
     FilterPipe,
