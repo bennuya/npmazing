@@ -2,22 +2,7 @@
   <i class="icofont-long-arrow-left"></i>
 </h1>
 
-<div *ngIf="package.length == 0" class="container">
-  <br />
-  <br />
-  <br />
-  <br />
-  <h1>
-    Sorry, this package could not be found! :(
-  </h1>
-  <br />
-  <br />
-  <br />
-  <br />
-</div>
-
-
-<div *ngIf="package.length >= 1" class="container">
+<div class="container">
 
   <div class="nameContainer">
     <h1>{{package.name}}</h1>
@@ -60,7 +45,7 @@
 
 
   <div class="mark">
-    <markdown [data]="markdown">
+    <markdown>
       <h2>{{package.readmeFilename}}</h2>
       {{package.readme}}
     </markdown>

@@ -8,14 +8,16 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  search;
+
   constructor(
     private route: Router
   ) { }
 
   ngOnInit() { }
 
-  goToSearch(search: string) {
-    this.route.navigate([`/package/` + search])
+  goToSearch() {
+    this.route.navigate([`/package/` + this.search])
   }
 
 }
