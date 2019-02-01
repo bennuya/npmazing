@@ -24,6 +24,7 @@ export class PackageComponent implements OnInit {
 
     this.dataService.getPackage(this.requestedPackage).subscribe(result => {
      this.package = result;  
+     console.log(this.package);
     }, err => {
       console.log(err);
     })

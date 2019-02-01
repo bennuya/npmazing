@@ -2,7 +2,22 @@
   <i class="icofont-long-arrow-left"></i>
 </h1>
 
-<div class="container">
+<div *ngIf="package.length == 0" class="container">
+  <br />
+  <br />
+  <br />
+  <br />
+  <h1>
+    Sorry, this package could not be found! :(
+  </h1>
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+
+
+<div *ngIf="package.length >= 1" class="container">
 
   <div class="nameContainer">
     <h1>{{package.name}}</h1>
@@ -78,7 +93,7 @@
     <a href="https://www.npmjs.com/package/{{package._id}}" target="_blank">Click here to see the package on NPM
       directly</a>
   </div>
-  
+
   <br />
 
 
