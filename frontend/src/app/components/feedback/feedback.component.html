@@ -17,7 +17,7 @@
         E-Mail
       </label>
       <input [(ngModel)]="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-        id="email" type="email" placeholder="Your E-Mail Address goes here...">
+        id="email" type="email" placeholder="Your E-Mail Address goes here..." required>
     </div>
 
     <div class="mb-6">
@@ -25,7 +25,7 @@
         Your Feedback & Ideas
       </label>
       <textarea [(ngModel)]="feedback" name="feedback" class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-        id="feedback" type="feedback" placeholder="Your Feedback and Ideas go here..."></textarea>
+        id="feedback" type="feedback" placeholder="Your Feedback and Ideas go here..." required></textarea>
     </div>
 
     <div class="btnContainer flex items-center justify-between">
@@ -41,8 +41,8 @@
 
   <div class="seeAll" *ngIf="show">
     <h3>
-      <a>
-        Do you want to look at all Feedbacks?
+      <a (click)="showFeedback()">
+        Show me my feedback!
       </a>
     </h3>
   </div>
