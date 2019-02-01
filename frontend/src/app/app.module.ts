@@ -17,6 +17,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { ShowFeedbackComponent } from './components/show-feedback/show-feedback.component';
+import { PackageNotFoundComponent } from './components/package-not-found/package-not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'package', component: PackageComponent },
   { path: 'package/:search', component: PackageComponent },
   { path: 'feedback', component: FeedbackComponent },
-  { path: 'all-feedbacks/:id', component: ShowFeedbackComponent }
+  { path: 'all-feedbacks/:id', component: ShowFeedbackComponent },
+  { path: '**', component: PackageNotFoundComponent }
 ];
 
 @NgModule({
@@ -36,6 +38,7 @@ const routes: Routes = [
     LoaderComponent,
     FeedbackComponent,
     ShowFeedbackComponent,
+    PackageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
