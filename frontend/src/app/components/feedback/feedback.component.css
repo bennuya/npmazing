@@ -1,0 +1,41 @@
+.titleFeedback {
+  text-decoration: none;
+}
+
+.btnContainer {
+  margin-left: 185px;
+}
+
+.fishBtn {
+  background-color: #212529;
+  border: 1px solid #ffc104;
+  border-radius: 3px;
+  padding: 10px;
+  transition: 0.3s;
+  color: #ffc104;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.fishBtn:hover {
+  background-color: #ffc104;
+  border: 1px solid #ffc104;
+  color: #7e6006;
+}
+
+textarea {
+  height: 100px;
+}
+
+.seeAll {
+  text-decoration: none;
+  color: #ffc104;
+  transition: 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.seeAll:hover {
+  color: #f5e8b5;
+}
+
