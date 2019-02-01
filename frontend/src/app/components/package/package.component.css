@@ -1,0 +1,219 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: block;
+  text-align: justify;
+}
+
+.nameContainer {
+  display: flex;
+  text-align: center;
+}
+
+.descriptionContainer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.maintainersTitle {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.maintainersContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  text-align: center;
+}
+
+.maintainerName {
+  order: 1;
+  text-align: center;
+}
+
+
+ul li {
+  text-align: left;
+  list-style-type: none;
+  margin-top: 5px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #ffc104;
+  transition: 0.3s;
+  text-align: center;
+}
+
+a:hover {
+  color: #f5e8b5;
+}
+
+.maintainerEmail {
+  order: 2;
+  text-align: center;
+}
+
+.homepageContainer {
+  margin-top: 27px;
+  text-align: center;
+}
+
+.fishBtn {
+  background-color: #212529 !important;
+  border: 1px solid #ffc104 !important;
+  border-radius: 20px !important;
+  transition: 0.3s !important;
+  color: #ffc104 !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.fishBtn:hover {
+  background-color: #ffc104 !important;
+  border: 1px solid #ffc104 !important;
+  color: #7e6006 !important;
+}
+
+.fishUl {
+  margin-top: 10px;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.keywordsContainer {
+  order: 1;
+  text-align: center;
+  margin-left: 230px;
+  margin-right: 230px;
+}
+
+.licenseContainer {
+  order: 2;
+  text-align: center;
+}
+
+.npmPageContainer {
+  order: 3;
+  text-align: center;
+}
+
+.homepageContainer h4 {
+  margin-bottom: 3px;
+}
+
+.keywordsContainer h4 {
+  margin-bottom: 3px;
+}
+
+.keywordsBtn {
+  border-color: 1px solid #ffc104;
+  background-color: #212529;
+  border-radius: 20px;
+  color: #ffc104;
+  transition: 0.3s;
+}
+
+.keywordsBtn:hover {
+  color: white;
+  background-color: #ffc104;
+}
+
+.backBtn {
+  cursor: pointer;
+  text-align: left;
+  margin-left: -280px !important;
+  opacity: 0.5;
+}
+
+.backBtn:hover {
+  opacity: 1;
+}
+
+.backBtn:active,
+.backBtn:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+/* .navArrow {
+    order: 2;
+    margin-top: -50px;
+    position: absolute;
+    margin-left: 80px;
+  } */
+
+.backBtn {
+  position: relative;
+  -webkit-animation-name: cursorAnimation;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite;
+  /* Safari 4.0 - 8.0 */
+  animation-name: cursorAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes cursorAnimation {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: 30px;
+    top: 0px;
+  }
+
+  50% {
+    left: 0px;
+    top: 0px;
+  }
+
+  75% {
+    left: 30px;
+    top: 0px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+/* Standard syntax */
+@keyframes cursorAnimation {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: 30px;
+    top: 0px;
+  }
+
+  50% {
+    left: 0px;
+    top: 0px;
+  }
+
+  75% {
+    left: 30px;
+    top: 0px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}

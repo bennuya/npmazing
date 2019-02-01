@@ -1,3 +1,102 @@
-<p>
-  package works!
-</p>
+<h1 class="backBtn" routerLink="/">
+  <i class="icofont-long-arrow-left"></i>
+</h1>
+
+<div *ngIf="package.length == 0" class="container">
+  <br />
+  <br />
+  <br />
+  <br />
+  <h1>
+    Sorry, this package could not be found! :(
+  </h1>
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+
+
+<div *ngIf="package.length >= 1" class="container">
+
+  <div class="nameContainer">
+    <h1>{{package.name}}</h1>
+  </div>
+
+  <div class="descriptionContainer">
+    <p>
+      {{package.description}}
+    </p>
+  </div>
+
+  <div class="maintainersTitle">
+    <h3>Maintainers</h3>
+  </div>
+
+  <div class="maintainersContainer">
+
+    <div class="maintainerName">
+      <ul *ngFor="let maintainer of package.maintainers">
+        <li>
+          <a href="https://www.npmjs.com/~{{maintainer.name}}" target="_blank">{{maintainer.name}}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="maintainerEmail">
+      <ul *ngFor="let maintainer of package.maintainers">
+        <li>{{maintainer.email}}</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="homepageContainer">
+    <h4>Link to Homepage</h4>
+    <p>
+      <a href="{{package.homepage}}" target="_blank">{{package.homepage}}</a>
+    </p>
+  </div>
+
+
+  <div class="mark">
+    <markdown [data]="markdown">
+      <h2>{{package.readmeFilename}}</h2>
+      {{package.readme}}
+    </markdown>
+  </div>
+
+
+
+
+  <div class="keywordsContainer">
+    <h3>Keywords</h3>
+    <ul class="fishUl" *ngFor="let keyword of package.keywords">
+      <li>
+        <a class="fishBtn" href="https://www.npmjs.com/search?q=keywords:{{keyword}}" target="_blank">{{keyword}}</a>
+      </li>
+    </ul>
+
+
+
+  </div>
+
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <br />
+  <br />
+
+  <div class="npmPageContainer">
+    <a href="https://www.npmjs.com/package/{{package._id}}" target="_blank">Click here to see the package on NPM
+      directly</a>
+  </div>
+
+  <br />
+
+
+
+
+</div>
